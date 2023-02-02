@@ -1,0 +1,40 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Documentation",
+      "description": "Documentation de l'api de calculs mathématiques",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/api/materiels/emprunter": {
+          "get": {
+            "tags": [
+              "RandomNumber"
+            ],
+            "description": "Récupérer un nombre aléatoire entre un Min et un Max",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "nombre aléatoire",
+                "schema": {
+                  "$ref": "#/definitions/randomize"
+                }
+              },
+              "500": {
+                "description": "Internal Server Error"
+              }
+            }
+          }
+        } 
+    }   
+  }
